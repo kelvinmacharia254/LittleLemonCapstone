@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'restaurant',
     # external apps
     'django_extensions',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
