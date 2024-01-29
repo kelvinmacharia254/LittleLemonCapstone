@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     # external apps
     'django_extensions',
     'rest_framework',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,14 @@ STATICFILES_DIRS = []
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+        # 'rest_framework.authentication.SessionAuthentication', # activate to use with DRF BrowsableAPI
+        # 'rest_framework.authentication.BasicAuthentication', # activate to use email and passwords to access endpoints
+    ),
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    )
+}
