@@ -1,0 +1,26 @@
+1. Connect to mysql, create a db and adjust DATABASE setting on settings.py
+2. Run
+ python manage.py migrate
+
+3. Create superuser
+ python manage.py createsuperuser
+
+4. Create other users from admin or using djoser endpoints from client like insomnia
+
+5. Test the following endpoints
+POST /obtain_token/
+POST /auth/users/
+GET /auth/users/
+GET /auth/users/me
+DEL /auth/users/me
+PATCH /auth/users/me/
+GET /restaurant/menu/
+GET /restaurant/menu/items
+POST /restaurant/menu/items
+GET /restaurant/menu/items/{menuItem_Id}
+PATCH /restaurant/menu/items/{menuItem_Id}
+GET /restaurant/booking/tables
+POST /restaurant/booking/tables/
+GET /restaurant/booking/tables/{table_Id}
+PATCH /restaurant/booking/tables/{table_Id}/
+DEL /restaurant/booking/tables/{table_Id}
